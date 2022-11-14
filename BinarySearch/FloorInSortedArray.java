@@ -41,7 +41,7 @@ public class FloorInSortedArray {
             }
         }
         if(flor<=target){
-            return florIndex;
+            return end;
         }
         return end;
 

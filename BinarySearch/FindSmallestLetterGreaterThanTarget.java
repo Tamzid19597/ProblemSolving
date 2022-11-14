@@ -22,5 +22,6 @@ public class FindSmallestLetterGreaterThanTarget {
             return letters[start];
         }
         return letters[0];
+        //return letters[start % (letters.length-1)]
     }
 }
