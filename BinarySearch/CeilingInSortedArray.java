@@ -39,6 +39,11 @@ public class CeilingInSortedArray {
         if(ceiling>=target){
             return ceiling;
         }
+        //another process:
+        if(arr[start]>=target){
+            return arr[start];
+        }
+        //end another process
         return -1;
     }
 }
