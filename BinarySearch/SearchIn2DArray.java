@@ -2,7 +2,7 @@ package BinarySearch;
 
 import java.util.Arrays;
 
-public class BinarySearchIn2DArray {
+public class SearchIn2DArray {
     public static void main(String[] args) {
         int [][]arr={ {10,15,20},
                       {15,25,35},
