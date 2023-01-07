@@ -1,5 +1,5 @@
 package MathsForDSA;
-//Time complexity O(sqrt(n))
+//Time complexity O(sqrt(n)) while checking prime
 public class PrimeOrNot {
     public static void main(String[] args) {
         int n=13;
