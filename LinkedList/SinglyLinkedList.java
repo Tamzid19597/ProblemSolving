@@ -37,12 +37,23 @@ public class SinglyLinkedList {
         }
         if (temp==null) System.out.println("Index out of reach!");
         else {
-            System.out.println(temp.value);
             Node node=new Node(value,temp.next);
             temp.next=node;
             if (node.next==null) this.tail=node;
         }
 
+    }
+    void recursiveInsertionAtPosition(int value,int index){
+        this.recursiveInsertion(this.head,value,index);
+    }
+    void recursiveInsertion(Node prevNode,int value,int index){
+        if (index==1 && prevNode!=null){
+            Node node=new Node(value,prevNode.next);
+            prevNode.next=node;
+            return;
+        }
+        if (prevNode.next==null) System.out.println("Index out of reach");
+        else recursiveInsertion(prevNode.next,value,index-1);
     }
     void deleteAtPosition(int index){
         if (index==0) {
@@ -69,7 +80,7 @@ public class SinglyLinkedList {
         SinglyLinkedList singlyLinkedList=new SinglyLinkedList();
         singlyLinkedList.insertAtFirst(30);
         singlyLinkedList.insertAtLast(15);
-        //singlyLinkedList.insertAtPosition(20,1);
+        singlyLinkedList.insertAtPosition(20,1);
         singlyLinkedList.deleteAtPosition(5);
         singlyLinkedList.displayList();
     }
