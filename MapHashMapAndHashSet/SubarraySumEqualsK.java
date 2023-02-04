@@ -2,7 +2,7 @@ package MapHashMapAndHashSet;
 
 import java.util.Arrays;
 import java.util.HashMap;
-
+//https://leetcode.com/problems/subarray-sum-equals-k/description/git add
 public class SubarraySumEqualsK {
     static int subarraySum(int[] nums, int k) {
         HashMap<Integer,Integer> hashMap=new HashMap<>();
