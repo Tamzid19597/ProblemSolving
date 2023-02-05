@@ -1,6 +1,6 @@
 package LinkedList;
-//https://leetcode.com/problems/palindrome-linked-list/description/
-public class PalindromeLinkedList {
+
+public class ReorderList {
     static class ListNode {
         int val;
         ListNode next;
@@ -8,17 +8,21 @@ public class PalindromeLinkedList {
         ListNode(int val) { this.val = val; }
         ListNode(int val, ListNode next) { this.val = val; this.next = next; }
     }
-    static boolean isPalindrome(ListNode head) {
-        if(head==null)return true;
+    static void reorderList(ListNode head) {
+        if(head==null)return;
         ListNode mid=middleNode(head);
         ListNode reverse=reverseLinkedList(mid);
         ListNode reRevrse=reverse;
+        ListNode temp;
         while(reverse!=null && head!=null){
-            if(reverse.val!=head.val)return false;
-            reverse=reverse.next;
-            head=head.next;
+            temp=head.next;
+            head.next=reverse;
+            head=temp;
+            temp=reverse.next;
+            reverse.next=head;
+            reverse=temp;
         }
-        return true;
+        if(head!=null)head.next=null;
     }
     static ListNode middleNode(ListNode head) {
         ListNode fast=head;
@@ -50,11 +54,9 @@ public class PalindromeLinkedList {
         System.out.println("end");
     }
     public static void main(String[] args) {
-        ListNode head=new ListNode(1,new ListNode(2,new ListNode(1,new ListNode(2,new ListNode(1)))));
+        ListNode head=new ListNode(1,new ListNode(2,new ListNode(3,new ListNode(4,new ListNode(5)))));
         display(head);
-        System.out.println(isPalindrome(head));
-        head=new ListNode(1,new ListNode(2,new ListNode(3,new ListNode(4,new ListNode(5)))));
+        reorderList(head);
         display(head);
-        System.out.println(isPalindrome(head));
     }
 }
