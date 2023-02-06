@@ -1,5 +1,5 @@
 package LeetCodeTop150Qs;
-
+//https://leetcode.com/problems/sqrtx/description/
 public class SqrtOfX {
     static int mySqrt(int x) {
         long r = x;
