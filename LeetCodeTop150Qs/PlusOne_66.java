@@ -1,28 +1,18 @@
 package LeetCodeTop150Qs;
-
+//https://leetcode.com/problems/plus-one/description/
 import java.util.Arrays;
 
-public class PlusOne {
+public class PlusOne_66 {
     static int[] plusOne(int[] digits) {
-        if(digits[digits.length-1]<9){
-            digits[digits.length-1]=digits[digits.length-1]+1;
-            return digits;
-        }
         for (int i = digits.length-1; i >= 0; i--) {
-            if(i==0 && digits[i]==9){
-                digits=new int[digits.length+1];
-                for (int j = 0; j < digits.length; j++) {
-                    if (j==0)digits[j]=1;
-                    else digits[j]=0;
-                }
-                break;
-            }
             if (digits[i]==9)digits[i]=0;
             else {
                 digits[i]=digits[i]+1;
-                break;
+                return digits;
             }
         }
+        digits=new int[digits.length+1];
+        digits[0]=1;
         return digits;
     }
     public static void main(String[] args) {
