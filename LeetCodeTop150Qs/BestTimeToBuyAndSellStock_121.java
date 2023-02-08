@@ -1,6 +1,6 @@
 package LeetCodeTop150Qs;
 //https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
-public class BestTimeToBuyAndSellStock {
+public class BestTimeToBuyAndSellStock_121 {
     static int maxProfit(int[] prices) {
         int maxProfit=0;
         int buyingPrice=prices[0]+1;
