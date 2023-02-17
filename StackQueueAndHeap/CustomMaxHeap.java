@@ -62,7 +62,7 @@ public class CustomMaxHeap {
     }
 
     public void display(){
-        for (int i = 1; i < this.data.length; i++) {
+        for (int i = 1; i < this.size; i++) {
             System.out.print(this.data[i]+" ");
             if (i!=0 && i%3==0) System.out.print(",");
         }
