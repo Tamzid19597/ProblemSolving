@@ -1,4 +1,4 @@
-package StacksAndQueues;
+package StackQueueAndHeap;
 public class CustomQueueUsingLinkedList{
     private Node head;
     private Node tail;

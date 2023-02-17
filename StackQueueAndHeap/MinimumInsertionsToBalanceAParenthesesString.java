@@ -1,7 +1,4 @@
-package StacksAndQueues;
-
-import java.util.HashMap;
-import java.util.Stack;
+package StackQueueAndHeap;
 
 //https://leetcode.com/problems/minimum-insertions-to-balance-a-parentheses-string/
 public class MinimumInsertionsToBalanceAParenthesesString {

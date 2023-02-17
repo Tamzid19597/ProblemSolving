@@ -1,6 +1,4 @@
-package StacksAndQueues;
-
-import java.util.Stack;
+package StackQueueAndHeap;
 
 public class StackMain {
     public static void main(String[] args) throws Exception{

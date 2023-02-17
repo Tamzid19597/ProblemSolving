@@ -1,4 +1,4 @@
-package StacksAndQueues;
+package StackQueueAndHeap;
 
 import java.util.Arrays;
 import java.util.Collections;

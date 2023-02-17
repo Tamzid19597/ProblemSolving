@@ -1,4 +1,4 @@
-package StacksAndQueues;
+package StackQueueAndHeap;
 
 public class CustomStack {
     private int[]data;

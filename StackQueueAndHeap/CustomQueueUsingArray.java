@@ -1,16 +1,14 @@
-package StacksAndQueues;
+package StackQueueAndHeap;
 
-public class CustomQueueUsingCircularArray {
+public class CustomQueueUsingArray {
     private int[]data;
     private static final int DEFAULT_SIZE=10;
     private int size=0;
-    private int start=0;
-    private int end=0;
 
-    public CustomQueueUsingCircularArray(){
+    public CustomQueueUsingArray(){
         this(DEFAULT_SIZE);
     }
-    public CustomQueueUsingCircularArray(int length) {
+    public CustomQueueUsingArray(int length) {
         this.data=new int[length];
     }
 
@@ -18,35 +16,33 @@ public class CustomQueueUsingCircularArray {
         if (this.isFull()){
             int [] temp=new int[this.data.length*2];
             for (int i = 0; i < data.length; i++) {
-                temp[i]=data[(i+this.start)%data.length];
+                temp[i]=data[i];
             }
-            this.start=0;
-            this.end=this.data.length;
             this.data=temp;
         }
         this.data[size++]=val;
-        end=(end+1)%data.length;
         return true;
     }
     public int remove() throws Exception{
         if (this.isEmpty()){
             throw new Exception("Queue is empty");
         }
-        int removed=this.data[start];
-        start=(start+1)%data.length;
+        int removed=this.data[0];
+        for (int i = 1; i < size; i++) {
+            data[i-1]=data[i];
+        }
+        this.data[size--]=0;
         return removed;
     }
     public int peek()throws Exception{
         if (this.isEmpty()){
             throw new Exception("Queue is empty");
         }
-        else return this.data[start];
+        else return this.data[0];
     }
     public void display(){
-        int i=start;
-        while (i!=end){
-            System.out.print(data[i]+"<<");
-            i=(i+1)%data.length;
+        for (int i = 0; i <this.size ; i++) {
+            System.out.print(this.data[i]+"<<");
         }
         System.out.println("end");
     }

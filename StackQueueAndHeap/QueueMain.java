@@ -1,7 +1,4 @@
-package StacksAndQueues;
-
-import java.util.LinkedList;
-import java.util.Queue;
+package StackQueueAndHeap;
 
 public class QueueMain {
     public static void main(String[] args)  throws Exception{
