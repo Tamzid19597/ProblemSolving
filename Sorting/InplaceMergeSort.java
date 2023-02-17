@@ -2,7 +2,7 @@ package Sorting;
 
 import java.util.Arrays;
 
-public class InplaceMergeSort {
+public class  InplaceMergeSort {
     public static void main(String[] args) {
         int [] arr={5,4,3,2,1};
         mergeSortInplace(arr,0,arr.length);
